@@ -1,0 +1,4 @@
+TOTAL SEATS
+
+Select DISTINCT COUNT (Parliament_constituency) AS Total_Seats
+From constituenctwise_results
