@@ -1,0 +1,18 @@
+What is the distribution of EVM votes versus postal votes for candidates in a specific constituency?
+
+
+
+SELECT 
+    cd.Candidate,
+    cd.Party,
+    cd.EVM_Votes,
+    cd.Postal_Votes,
+    cd.Total_Votes,
+    cr.Constituency_Name
+FROM 
+    constituencywise_details cd
+JOIN 
+    constituencywise_results cr ON cd.Constituency_ID = cr.Constituency_ID
+WHERE 
+    cr.Constituency_Name = 'MATHURA'
+ORDER BY cd.Total_Votes DESC;
